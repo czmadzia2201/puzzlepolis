@@ -126,8 +126,7 @@ h2 {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  height: 160px;
-  align-self: center;
+  min-height: 160px;
   overflow: hidden;
   border-radius: 12px;
   background: #f8f8f8;
@@ -309,6 +308,17 @@ h2 {
   }
 }
 
+@media (max-width: 1200px) {
+  .game-card,
+  .game-card--wide {
+    grid-column: span 3;
+  }
+
+  .game-card:last-child {
+    grid-column: span 6;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     padding: 30px;
@@ -323,19 +333,18 @@ h2 {
     max-width: 450px;
   }
 
-  .game-card,
-  .game-card--wide {
-    grid-column: span 3;
-  }
-
-  .game-card:last-child {
-    grid-column: span 6;
-  }
-
   .about-card__title {
     font-size: 19px;
   }
 
+}
+
+@media (max-width: 800px) {
+  .game-card,
+  .game-card--wide,
+  .game-card:last-child {
+    grid-column: span 6;
+  }
 }
 
 @media (max-width: 650px) {
@@ -375,10 +384,6 @@ h2 {
     padding: 13px;
   }
 
-  .game-card__preview-container {
-    height: 160px;
-  }
-
   .game-card p {
     margin-bottom: 12px;
   }
@@ -408,6 +413,14 @@ h2 {
 
   .about-dialog {
     padding: 26px 24px 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .game-card,
+  .game-card--wide,
+  .game-card:last-child {
+    grid-template-columns: 1fr;
   }
 }
 
