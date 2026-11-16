@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f5f4">
+  <meta name="description" content="Puzzlepolis is a small city of thoughtful browser puzzle games. Play Futoshiki, Dice Game, Mastermind, Memory and Shape Puzzles.">
+  <title>Puzzlepolis — A small city of games that make you think</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <img class="hero__art" src="assets/banner.webp" alt="" aria-hidden="true">
+      <div class="hero__copy">
+        <h1>Welcome to Puzzlepolis</h1>
+        <p>A collection of thoughtful browser puzzle games —<br class="hero__break"> logic, deduction, memory, and more.</p>
+      </div>
+    </header>
+    <main>
+      <section class="games" aria-label="Puzzle games">
+        <article class="game-card">
+          <img class="game-card__preview" src="assets/futoshiki.svg" alt="Futoshiki number grid with inequality symbols">
+          <div class="game-card__content">
+            <h2>Futoshiki</h2>
+            <p>Fill the grid with numbers so the inequalities are satisfied.</p>
+            <a class="play-button" href="/futoshiki/"><span aria-hidden="true">▶</span> Play</a>
+          </div>
+        </article>
+        <article class="game-card">
+          <img class="game-card__preview" src="assets/dice.svg" alt="Dice Game score sheet">
+          <div class="game-card__content">
+            <h2>Dice Game</h2>
+            <p>Roll the dice and aim for the best scoring combination.</p>
+            <a class="play-button" href="/dice/"><span aria-hidden="true">▶</span> Play</a>
+          </div>
+        </article>
+        <article class="game-card">
+          <img class="game-card__preview" src="assets/mastermind.svg" alt="Colorful Mastermind pegs">
+          <div class="game-card__content">
+            <h2>Mastermind</h2>
+            <p>Crack the secret color code using logic and clever guesses.</p>
+            <a class="play-button" href="/mastermind/"><span aria-hidden="true">▶</span> Play</a>
+          </div>
+        </article>
+        <article class="game-card game-card--wide">
+          <img class="game-card__preview" src="assets/memory.svg" alt="Memory game grid with covered cards">
+          <div class="game-card__content">
+            <h2>Memory</h2>
+            <p>Find all matching pairs by turning over cards and using your memory.</p>
+            <a class="play-button" href="/memory/"><span aria-hidden="true">▶</span> Play</a>
+          </div>
+        </article>
+        <article class="game-card game-card--wide">
+          <img class="game-card__preview" src="assets/shapepuzzles.svg" alt="Green geometric pieces forming an animal">
+          <div class="game-card__content">
+            <h2>Shape Puzzles</h2>
+            <p>Arrange geometric pieces to recreate a target shape.</p>
+            <a class="play-button" href="/shapepuzzles/"><span aria-hidden="true">▶</span> Play</a>
+          </div>
+        </article>
+      </section>
+      <section class="about-cards" aria-label="About Puzzlepolis and its author">
+        <button class="about-card" type="button" data-dialog="author-dialog" aria-haspopup="dialog">
+          <span class="about-card__icon" aria-hidden="true">♧</span>
+          <span class="about-card__divider" aria-hidden="true"></span>
+          <span class="about-card__copy">
+            <span class="about-card__title">About the Author</span>
+            <span class="about-card__description">Puzzlepolis is made by a programmer who also writes books.</span>
+          </span>
+        </button>
+        <button class="about-card" type="button" data-dialog="puzzlepolis-dialog" aria-haspopup="dialog">
+          <span class="about-card__icon" aria-hidden="true">⌂</span>
+          <span class="about-card__divider" aria-hidden="true"></span>
+          <span class="about-card__copy">
+            <span class="about-card__title">About Puzzlepolis</span>
+            <span class="about-card__description">A small city of games for curious minds and thoughtful play.</span>
+          </span>
+        </button>
+      </section>
+    </main>
+  </div>
+  <dialog class="about-dialog" id="author-dialog" aria-labelledby="author-title">
+    <div class="about-dialog__heading"><h2 id="author-title">About the Author</h2><button type="button" class="dialog-close" aria-label="Close">×</button></div>
+    <p>Here will be a little more about the author.</p>
+  </dialog>
+  <dialog class="about-dialog" id="puzzlepolis-dialog" aria-labelledby="puzzlepolis-title">
+    <div class="about-dialog__heading"><h2 id="puzzlepolis-title">About Puzzlepolis</h2><button type="button" class="dialog-close" aria-label="Close">×</button></div>
+    <p>Here will be a little more about Puzzlepolis.</p>
+  </dialog>
+</body>
+</html>

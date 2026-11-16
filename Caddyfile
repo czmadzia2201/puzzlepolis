@@ -1,0 +1,9 @@
+{
+    auto_https off
+}
+
+:{$PORT:3000} {
+    encode gzip zstd
+    root * /srv
+    file_server
+}
