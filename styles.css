@@ -267,7 +267,7 @@ button,
   background: rgb(0 0 0 / 40%);
 }
 
-.about-dialog__header {
+.about-dialog__heading {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -284,7 +284,7 @@ button,
   line-height: 1.5;
 }
 
-.about-dialog__close {
+.dialog-close {
   width: 36px;
   height: 36px;
   margin: -5px -8px 0 0;
@@ -297,7 +297,7 @@ button,
   cursor: pointer;
 }
 
-.about-dialog__close:hover {
+.dialog-close:hover {
   background: #f0f0f0;
 }
 
@@ -378,7 +378,7 @@ button,
     font-size: 16px;
   }
 
-  .hero__desktop-break {
+  .hero__break {
     display: none;
   }
 
