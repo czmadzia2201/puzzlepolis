@@ -3,7 +3,7 @@
   --page-background: #f6f7f9;
   --panel-background: #fff;
   --panel-border: #ddd;
-  --body-color: #222;
+  --body-color: #666;
   --heading-color: #666;
   --button-border: #2e7d32;
   --button-background: #eef8ee;
@@ -95,8 +95,8 @@ button,
 
 .hero p {
   margin: 0;
-  font-size: clamp(16px, 1.55vw, 19px);
-  line-height: 1.36;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .games {
@@ -144,8 +144,8 @@ button,
 
 .game-card p {
   margin: 0 0 18px;
-  font-size: 16px;
-  line-height: 1.29;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .play-button {
@@ -247,8 +247,8 @@ button,
 }
 
 .about-card__description {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .about-dialog {
@@ -280,8 +280,8 @@ button,
 
 .about-dialog p {
   margin: 20px 0 0;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .dialog-close {
@@ -309,10 +309,6 @@ button,
 
   .game-card--wide {
     gap: 18px;
-  }
-
-  .game-card p {
-    font-size: 15px;
   }
 
   .about-card {
@@ -348,9 +344,6 @@ button,
     font-size: 19px;
   }
 
-  .about-card__description {
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 650px) {
@@ -366,7 +359,6 @@ button,
 
   .hero p {
     max-width: 300px;
-    font-size: 16px;
   }
 
   .hero__break {
@@ -401,7 +393,6 @@ button,
 
   .game-card p {
     margin-bottom: 12px;
-    font-size: clamp(13px, 3.6vw, 16px);
   }
 
   .play-button {
@@ -431,9 +422,6 @@ button,
     font-size: 20px;
   }
 
-  .about-card__description {
-    font-size: 15px;
-  }
 
   .about-dialog {
     padding: 26px 24px 30px;
