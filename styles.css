@@ -254,13 +254,6 @@ h2 {
   background: rgb(0 0 0 / 40%);
 }
 
-.about-dialog__heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-}
-
 .about-dialog h2 {
   font-size: 20px;
 }
@@ -271,21 +264,20 @@ h2 {
   line-height: 1.55;
 }
 
-.dialog-close {
-  width: 36px;
-  height: 36px;
-  margin: -5px -8px 0 0;
-  padding: 0;
-  border: 1px solid #bbb;
+.dialog-ok {
+  display: block;
+  min-width: 100px;
+  margin: 18px 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid var(--button-border);
   border-radius: 8px;
-  background: #fff;
-  color: #222;
-  font-size: 28px;
+  background: var(--button-background);
+  color: var(--button-color);
   cursor: pointer;
 }
 
-.dialog-close:hover {
-  background: #f0f0f0;
+.dialog-ok:hover {
+  background: var(--button-hover-background);
 }
 
 @media (max-width: 1110px) {
