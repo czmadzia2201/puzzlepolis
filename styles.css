@@ -43,6 +43,16 @@ h2,
   letter-spacing: 0.5px;
 }
 
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
 button,
 .play-button {
   font-family: Arial, Helvetica, sans-serif;
@@ -81,11 +91,6 @@ button,
 .hero__copy {
   position: relative;
   max-width: 565px;
-}
-
-.hero h1 {
-  margin-bottom: 11px;
-  font-size: clamp(28px, 3vw, 36px);
 }
 
 .hero p {
@@ -135,11 +140,6 @@ button,
   display: flex;
   flex-direction: column;
   min-width: 0;
-}
-
-.game-card h2 {
-  margin: 3px 0 11px;
-  font-size: 19px;
 }
 
 .game-card p {
@@ -311,10 +311,6 @@ button,
     gap: 18px;
   }
 
-  .game-card h2 {
-    font-size: 18px;
-  }
-
   .game-card p {
     font-size: 15px;
   }
@@ -368,11 +364,6 @@ button,
     padding: 25px 21px;
   }
 
-  .hero h1 {
-    max-width: 275px;
-    font-size: 28px;
-  }
-
   .hero p {
     max-width: 300px;
     font-size: 16px;
@@ -406,11 +397,6 @@ button,
 
   .game-card__preview {
     max-height: 160px;
-  }
-
-  .game-card h2 {
-    margin: 4px 0 7px;
-    font-size: clamp(16px, 4.4vw, 20px);
   }
 
   .game-card p {
