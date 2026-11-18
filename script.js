@@ -23,7 +23,10 @@ document.querySelectorAll('[data-dialog]').forEach(button => {
     }
 
     await dialogLoads.get(dialog.id);
-    if (!dialog.open) dialog.showModal();
+    if (!dialog.open) {
+      dialog.showModal();
+      dialog.scrollTop = 0;
+    }
   });
 });
 

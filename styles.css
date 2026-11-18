@@ -243,7 +243,7 @@ h2 {
 .about-dialog {
   width: min(540px, calc(100% - 36px));
   max-height: calc(100vh - 48px);
-  padding: 30px 34px 36px;
+  padding: 30px 36px;
   border: 1px solid var(--panel-border);
   border-radius: 14px;
   background: var(--panel-background);
