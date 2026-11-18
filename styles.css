@@ -297,12 +297,6 @@ h2 {
   }
 }
 
-@media (max-width: 800px) {
-  .game-card {
-    grid-column: span 6;
-  }
-}
-
 @media (max-width: 650px) {
   .page-shell {
     width: min(100% - 24px, 480px);
@@ -322,6 +316,7 @@ h2 {
   }
 
   .game-card {
+    grid-column: span 6;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     padding: 12px;
