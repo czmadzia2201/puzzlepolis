@@ -5,6 +5,7 @@
   --panel-border: #ddd;
   --body-color: #666;
   --layout-gap: 16px;
+  --page-top-gap: 28px;
   --button-border: #2e7d32;
   --button-background: #eef8ee;
   --button-color: #256429;
@@ -54,7 +55,7 @@ h2 {
 
 .page-shell {
   width: min(1200px, calc(100% - 44px));
-  margin: 28px auto 42px;
+  margin: var(--page-top-gap) auto 42px;
 }
 
 .hero {
@@ -306,7 +307,7 @@ h2 {
 @media (max-width: 650px) {
   .page-shell {
     width: min(100% - 24px, 480px);
-    margin: 12px auto 26px;
+    margin-bottom: 26px;
   }
 
   .hero {
