@@ -16,7 +16,7 @@
 }
 
 body {
-  min-width: 320px;
+  min-width: 624px;
   margin: 0;
   background: var(--page-background);
   color: var(--body-color);
@@ -293,8 +293,7 @@ h2 {
 
 @media (max-width: 650px) {
   .page-shell {
-    width: min(100% - 24px, 480px);
-    margin-bottom: 26px;
+    width: calc(100% - 24px);
   }
 
   .hero p {
@@ -330,8 +329,3 @@ h2 {
   }
 }
 
-@media (max-width: 380px) {
-  .game-card {
-    grid-template-columns: 1fr;
-  }
-}
