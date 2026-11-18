@@ -4,7 +4,7 @@
   --panel-background: #fff;
   --panel-border: #ddd;
   --body-color: #666;
-  --heading-color: #666;
+  --layout-gap: 16px;
   --button-border: #2e7d32;
   --button-background: #eef8ee;
   --button-color: #256429;
@@ -37,7 +37,6 @@ h2,
 .about-card__title {
   margin: 0;
   line-height: 1.1;
-  color: var(--heading-color);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -58,7 +57,6 @@ h2 {
   margin: 28px auto 42px;
 }
 
-/* The illustration keeps its soft fade; no page element uses a color gradient. */
 .hero {
   position: relative;
   isolation: isolate;
@@ -92,19 +90,22 @@ h2 {
   line-height: 1.55;
 }
 
-.games {
+.games,
+.about-cards {
   display: grid;
+  gap: var(--layout-gap);
+  margin-top: var(--layout-gap);
+}
+
+.games {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 22px;
 }
 
 .game-card {
   grid-column: span 2;
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(150px, 1fr);
-  gap: 15px;
-  min-height: 200px;
+  gap: 16px;
   padding: 16px;
   border: 1px solid var(--panel-border);
   border-radius: 14px;
@@ -113,9 +114,7 @@ h2 {
 
 .game-card--wide {
   grid-column: span 3;
-  grid-template-columns: minmax(0, 1.2fr) minmax(150px, 1fr);
-  gap: 26px;
-  min-height: 200px;
+  gap: 24px;
   padding: 16px 24px;
 }
 
@@ -146,7 +145,7 @@ h2 {
 }
 
 .game-card p {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   font-size: 14px;
   line-height: 1.55;
 }
@@ -182,19 +181,16 @@ h2 {
 }
 
 .about-cards {
-  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 20px;
 }
 
 .about-card {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 16px;
   min-width: 0;
-  min-height: 84px;
-  padding: 14px 30px;
+  min-height: 80px;
+  padding: 14px 20px;
   border: 1px solid var(--panel-border);
   border-radius: 14px;
   background: var(--panel-background);
@@ -211,7 +207,6 @@ h2 {
   display: grid;
   place-items: center;
   flex: 0 0 52px;
-  width: 52px;
   height: 52px;
   border-radius: 50%;
   background: var(--button-background);
@@ -264,10 +259,6 @@ h2 {
   background: rgb(0 0 0 / 40%);
 }
 
-.about-dialog h2 {
-  font-size: 20px;
-}
-
 .about-dialog p {
   margin: 20px 0 0;
   font-size: 14px;
@@ -290,25 +281,8 @@ h2 {
   background: var(--button-hover-background);
 }
 
-@media (max-width: 1110px) {
-  .game-card {
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .game-card--wide {
-    gap: 18px;
-  }
-
-  .about-card {
-    gap: 18px;
-    padding: 14px 20px;
-  }
-}
-
 @media (max-width: 1120px) {
-  .game-card,
-  .game-card--wide {
+  .game-card {
     grid-column: span 3;
   }
 
@@ -322,24 +296,13 @@ h2 {
     padding: 30px;
   }
 
-  .hero__art {
-    opacity: 0.88;
-  }
-
   .hero__copy {
     max-width: 450px;
   }
-
-  .about-card__title {
-    font-size: 19px;
-  }
-
 }
 
 @media (max-width: 800px) {
-  .game-card,
-  .game-card--wide,
-  .game-card:last-child {
+  .game-card {
     grid-column: span 6;
   }
 }
@@ -351,7 +314,6 @@ h2 {
   }
 
   .hero {
-    min-height: 200px;
     padding: 25px 21px;
   }
 
@@ -363,51 +325,26 @@ h2 {
     height: 100%;
     object-fit: cover;
     opacity: 0.35;
-    mask-image: linear-gradient(90deg, transparent, #000 30%);
   }
 
-  .games {
-    grid-template-columns: 1fr;
+  .game-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    margin-top: 15px;
-  }
-
-  .game-card,
-  .game-card--wide,
-  .game-card:last-child {
-    grid-column: 1;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 13px;
-    min-height: 175px;
-    padding: 13px;
-  }
-
-  .game-card p {
-    margin-bottom: 12px;
+    padding: 12px;
   }
 
   .about-cards {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 15px;
   }
 
   .about-card {
-    gap: 16px;
-    min-height: 80px;
-    padding: 12px 19px;
+    padding: 12px 20px;
   }
 
   .about-card__icon {
     flex-basis: 46px;
-    width: 46px;
     height: 46px;
   }
-
-  .about-card__title {
-    font-size: 20px;
-  }
-
 
   .about-dialog {
     padding: 26px 24px 30px;
@@ -415,15 +352,7 @@ h2 {
 }
 
 @media (max-width: 380px) {
-  .game-card,
-  .game-card--wide,
-  .game-card:last-child {
+  .game-card {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
   }
 }
