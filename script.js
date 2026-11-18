@@ -6,18 +6,17 @@ document.querySelectorAll('[data-dialog]').forEach(button => {
     if (!dialog) return;
 
     if (!dialogLoads.has(dialog.id)) {
-      const content = dialog.querySelector('.about-dialog__content');
       const load = fetch(dialog.dataset.contentUrl)
         .then(response => {
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           return response.text();
         })
         .then(html => {
-          content.innerHTML = html;
+          dialog.innerHTML = html;
         })
         .catch(error => {
           console.error('Failed to load About dialog:', error);
-          content.innerHTML = '<p>Could not load this text. Please try again.</p>';
+          dialog.innerHTML = `<h2 id="${dialog.getAttribute('aria-labelledby')}">About</h2><p>Could not load this text. Please try again.</p><button type="button" class="dialog-ok">OK</button>`;
           dialogLoads.delete(dialog.id);
         });
       dialogLoads.set(dialog.id, load);
@@ -29,8 +28,12 @@ document.querySelectorAll('[data-dialog]').forEach(button => {
 });
 
 document.querySelectorAll('.about-dialog').forEach(dialog => {
-  dialog.querySelector('.dialog-ok')?.addEventListener('click', () => dialog.close());
+
   dialog.addEventListener('click', event => {
+    if (event.target.closest('.dialog-ok')) {
+      dialog.close();
+      return;
+    }
     const r = dialog.getBoundingClientRect();
     if (event.clientX < r.left || event.clientX > r.right ||
         event.clientY < r.top || event.clientY > r.bottom) dialog.close();
