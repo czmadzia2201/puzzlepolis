@@ -6,16 +6,15 @@
     encode gzip zstd
 
     redir /dice /dice/ 308
+    redir /futoshiki /futoshiki/ 308
+    redir /mastermind /mastermind/ 308
+    redir /memory /memory/ 308
 
     handle /dice/* {
         reverse_proxy https://dice-frontend.up.railway.app {
             header_up Host {upstream_hostport}
         }
     }
-
-    redir /futoshiki /futoshiki/ 308
-    redir /mastermind /mastermind/ 308
-    redir /memory /memory/ 308
 
     handle /futoshiki/* {
         reverse_proxy https://futoshiki-frontend.up.railway.app {
