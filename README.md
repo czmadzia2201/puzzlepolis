@@ -1,6 +1,6 @@
 # Puzzlepolis
 
-A small city of games that make you think — a static landing page for **Futoshiki**, **Dice Game**, **Mastermind**, **Memory**, and **Shape Puzzles**.
+A small city of games that make you think — a static landing page for **Futoshiki**, **Dice**, **Mastermind**, **Memory**, and **Shape Puzzles**.
 
 ## Run locally
 
