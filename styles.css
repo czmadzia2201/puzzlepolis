@@ -81,7 +81,7 @@ h2 {
 
 .hero__copy {
   position: relative;
-  max-width: 565px;
+  max-width: 450px;
 }
 
 .hero p {
@@ -294,10 +294,6 @@ h2 {
 @media (max-width: 900px) {
   .hero {
     padding: 30px;
-  }
-
-  .hero__copy {
-    max-width: 450px;
   }
 }
 
