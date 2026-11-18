@@ -16,7 +16,7 @@
 }
 
 body {
-  min-width: 624px;
+  min-width: 450px;
   margin: 0;
   background: var(--page-background);
   color: var(--body-color);
@@ -313,10 +313,6 @@ h2 {
 
   .about-cards {
     grid-template-columns: 1fr;
-  }
-
-  .about-card {
-    padding: 12px 20px;
   }
 
   .about-card__icon {
