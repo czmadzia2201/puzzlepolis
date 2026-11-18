@@ -88,6 +88,7 @@ h2 {
   margin: 0;
   font-size: 16px;
   line-height: 1.55;
+  max-width: 400px;
 }
 
 .games,
@@ -104,7 +105,7 @@ h2 {
 .game-card {
   flex: 1 1 calc((100% - 2 * var(--layout-gap)) / 3);
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(150px, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   padding: 16px;
   border: 1px solid var(--panel-border);
@@ -202,8 +203,8 @@ h2 {
 .about-card__icon {
   display: grid;
   place-items: center;
-  flex: 0 0 52px;
-  height: 52px;
+  flex: 0 0 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--button-background);
   color: var(--button-border);
@@ -288,32 +289,16 @@ h2 {
     width: calc(100% - 24px);
   }
 
-  .hero p {
-    max-width: 400px;
-  }
-
   .hero__art {
     opacity: 0.35;
   }
 
   .game-card {
     flex-basis: 100%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    padding: 12px;
   }
 
   .about-cards {
     grid-template-columns: 1fr;
-  }
-
-  .about-card__icon {
-    flex-basis: 46px;
-    height: 46px;
-  }
-
-  .about-dialog {
-    padding: 26px 24px 30px;
   }
 }
 
