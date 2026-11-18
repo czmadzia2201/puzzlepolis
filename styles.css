@@ -62,7 +62,7 @@ h2 {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: 212px;
+  min-height: 220px;
   padding: 29px 47px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
