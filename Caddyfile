@@ -13,6 +13,28 @@
         }
     }
 
+    redir /futoshiki /futoshiki/ 308
+    redir /mastermind /mastermind/ 308
+    redir /memory /memory/ 308
+
+    handle /futoshiki/* {
+        reverse_proxy https://futoshiki-frontend.up.railway.app {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle /mastermind/* {
+        reverse_proxy https://mastermind-frontend.up.railway.app {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle /memory/* {
+        reverse_proxy https://memory-frontend.up.railway.app {
+            header_up Host {upstream_hostport}
+        }
+    }
+
     handle {
         root * .
         file_server
