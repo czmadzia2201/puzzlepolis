@@ -4,6 +4,6 @@
 
 :{$PORT:3000} {
     encode gzip zstd
-    root * /srv
+    root * .
     file_server
 }
