@@ -61,7 +61,7 @@ h2 {
   position: relative;
   isolation: isolate;
   min-height: 200px;
-  padding: 29px 47px;
+  padding: 36px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
   border-radius: 14px;
@@ -291,20 +291,10 @@ h2 {
   }
 }
 
-@media (max-width: 900px) {
-  .hero {
-    padding: 30px;
-  }
-}
-
 @media (max-width: 650px) {
   .page-shell {
     width: min(100% - 24px, 480px);
     margin-bottom: 26px;
-  }
-
-  .hero {
-    padding: 25px 21px;
   }
 
   .hero p {
