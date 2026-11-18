@@ -4,6 +4,17 @@
 
 :{$PORT:3000} {
     encode gzip zstd
-    root * .
-    file_server
+
+    redir /dice /dice/ 308
+
+    handle /dice/* {
+        reverse_proxy https://dice-frontend.up.railway.app {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle {
+        root * .
+        file_server
+    }
 }
