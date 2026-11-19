@@ -167,15 +167,6 @@ h2 {
   background: var(--button-hover-background);
 }
 
-.play-button--disabled,
-.play-button--disabled:hover {
-  border-color: #bbb;
-  background: #fff;
-  color: #222;
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
 .about-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

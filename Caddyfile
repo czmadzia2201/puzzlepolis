@@ -9,6 +9,7 @@
     redir /futoshiki /futoshiki/ 308
     redir /mastermind /mastermind/ 308
     redir /memory /memory/ 308
+    redir /shape-puzzles /shape-puzzles/ 308
 
     handle /dice/* {
         reverse_proxy https://dice-frontend.up.railway.app {
@@ -30,6 +31,12 @@
 
     handle /memory/* {
         reverse_proxy https://memory-frontend.up.railway.app {
+            header_up Host {upstream_hostport}
+        }
+    }
+
+    handle /shape-puzzles/* {
+        reverse_proxy https://shape-puzzles-frontend.up.railway.app {
             header_up Host {upstream_hostport}
         }
     }
