@@ -27,6 +27,13 @@ a {
   color: inherit;
 }
 
+.title-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
 :focus-visible {
   outline: 2px solid #666;
   outline-offset: 3px;
@@ -300,7 +307,7 @@ h2 {
   background: var(--panel-background);
   max-width: 720px;
   margin: 0 auto;
-  padding: 36px 50px;
+  padding: 25px 50px;
 }
 
 .privacy-card p {
@@ -313,11 +320,17 @@ h2 {
   margin: 12px auto;
   border-top: 1px solid var(--border-color);
   text-align: center;
-  font-size: 14px;
 }
 
-.site-footer a {
+.page-link {
+  color: #666;
+  font-size: 14px;
   text-decoration: none;
+}
+
+.page-link:hover,
+.page-link:focus-visible {
+  text-decoration: underline;
 }
 
 .privacy-card + .site-footer {
