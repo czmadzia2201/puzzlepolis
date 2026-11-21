@@ -310,12 +310,10 @@ h2 {
 }
 
 .site-footer {
-  margin: 20px 0;
-  padding-top: 12px;
+  margin: 12px auto;
   border-top: 1px solid var(--border-color);
   text-align: center;
   font-size: 14px;
-  line-height: var(--line-height);
 }
 
 .site-footer a {
