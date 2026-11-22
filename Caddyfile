@@ -42,6 +42,9 @@
     }
 
     handle {
+        @dynamicAssets path *.css *.js
+        header @dynamicAssets Cache-Control "no-cache"
+
         root * .
         file_server
     }
