@@ -38,3 +38,16 @@ document.querySelectorAll('.about-dialog').forEach(dialog => {
     }
   });
 });
+
+const backLink = document.getElementById('back-link');
+if (backLink) {
+  backLink.addEventListener('click', event => {
+    if (document.referrer && history.length > 1) {
+      const previousUrl = new URL(document.referrer);
+      if (previousUrl.origin === location.origin && previousUrl.href !== location.href) {
+        event.preventDefault();
+        history.back();
+      }
+    }
+  });
+}
