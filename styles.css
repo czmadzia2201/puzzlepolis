@@ -9,6 +9,7 @@
   --button-color: #256429;
   --button-hover-background: #e2f2e2;
   --line-height: 1.55;
+  --cookie-banner-right: max(42px, calc((100vw - 1200px) / 2 + 20px));
 }
 
 * {
@@ -283,6 +284,10 @@ h2 {
 }
 
 @media (max-width: 650px) {
+  :root {
+    --cookie-banner-right: 32px;
+  }
+
   .page-shell {
     width: calc(100% - 24px);
   }
