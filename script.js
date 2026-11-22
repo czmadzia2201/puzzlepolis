@@ -79,7 +79,7 @@ cookieBanner.setAttribute('aria-label', 'Cookie preferences');
 cookieBanner.hidden = true;
 cookieBanner.innerHTML = `
   <p>We use Google Analytics to understand how visitors use Puzzlepolis. Analytics cookies are optional. You can change your choice at any time using the Cookie Settings link in the footer.</p>
-  <p>For more information, see our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+  <p>For more information, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
   <div class="cookie-banner__actions">
     <button type="button" class="cookie-banner__button" data-cookie-choice="rejected">Reject</button>
     <button type="button" class="cookie-banner__button cookie-banner__button--accept" data-cookie-choice="accepted">Accept</button>
