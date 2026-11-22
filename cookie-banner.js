@@ -48,7 +48,7 @@ cookieBanner.querySelectorAll('[data-cookie-choice]').forEach(button => {
 
 // Event delegation also works for footer links rendered later by Angular.
 document.addEventListener('click', event => {
-  if (event.target.closest('.cookie-settings-link')) {
+  if (event.target.closest('#cookie-settings')) {
     cookieBanner.hidden = false;
     cookieBanner.querySelector('[data-cookie-choice="rejected"]').focus();
   }
