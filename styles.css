@@ -336,3 +336,20 @@ h2 {
 .privacy-card + .site-footer {
   max-width: 720px;
 }
+
+
+/* Cookie preferences */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cookie-settings-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}

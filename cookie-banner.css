@@ -1,0 +1,80 @@
+/* Self-contained styles shared by all Puzzlepolis frontends. */
+.cookie-banner *,
+.cookie-banner *::before,
+.cookie-banner *::after {
+  box-sizing: border-box;
+}
+
+.cookie-banner a {
+  color: inherit;
+}
+
+.cookie-banner {
+  --cookie-border-color: #ddd;
+  --cookie-panel-background: #fff;
+  --cookie-body-color: #666;
+  --cookie-button-background: #eef8ee;
+  --cookie-button-color: #256429;
+  --cookie-button-hover-background: #e2f2e2;
+  --cookie-line-height: 1.55;
+
+  box-sizing: border-box;
+  color: var(--cookie-body-color);
+  font-family: "Times New Roman", Times, serif;
+  position: fixed;
+  z-index: 1000;
+  right: var(--cookie-banner-right, max(20px, calc((100vw - 1200px) / 2 + 20px)));
+  bottom: 20px;
+  width: calc(100% - 40px);
+  max-width: 420px;
+  padding: 18px 20px;
+  border: 1px solid var(--cookie-border-color);
+  border-radius: 14px;
+  background: var(--cookie-panel-background);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 15%);
+  font-size: 14px;
+  line-height: var(--cookie-line-height);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner p {
+  margin: 0 0 12px;
+}
+
+.cookie-banner p + p {
+  margin-bottom: 16px;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cookie-banner__button {
+  min-width: 90px;
+  padding: 8px 14px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--cookie-body-color);
+  cursor: pointer;
+  line-height: 1.1;
+}
+
+.cookie-banner__button:hover {
+  background: #f0f0f0;
+}
+
+.cookie-banner__button--accept {
+  border-color: #2e7d32;
+  background: var(--cookie-button-background);
+  color: var(--cookie-button-color);
+}
+
+.cookie-banner__button--accept:hover {
+  background: var(--cookie-button-hover-background);
+}
