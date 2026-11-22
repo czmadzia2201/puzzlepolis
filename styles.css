@@ -315,12 +315,6 @@ h2 {
   padding: 25px 50px;
 }
 
-.privacy-navigation {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .privacy-card p {
   margin: 20px 0 0;
   font-size: 14px;
