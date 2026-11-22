@@ -57,12 +57,12 @@
 .cookie-banner__button {
   min-width: 90px;
   padding: 8px 14px;
-  border: 1px solid var(--cookie-border-color);
+  border: 1px solid #bbb;
   border-radius: 8px;
   background: #fff;
   color: var(--cookie-body-color);
-  font: inherit;
   cursor: pointer;
+  line-height: 1.1;
 }
 
 .cookie-banner__button:hover {
