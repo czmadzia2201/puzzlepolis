@@ -35,10 +35,6 @@ document.querySelectorAll('.about-dialog').forEach(dialog => {
   dialog.addEventListener('click', event => {
     if (event.target.closest('.dialog-ok')) {
       dialog.close();
-      return;
     }
-    const r = dialog.getBoundingClientRect();
-    if (event.clientX < r.left || event.clientX > r.right ||
-        event.clientY < r.top || event.clientY > r.bottom) dialog.close();
   });
 });
